@@ -13,9 +13,10 @@ class CountryCountChart extends React.Component {
     // console.log(Object.values(data['country_counts']).slice(1, 10));
   
     this.state = {
-      data: Object.values(data['country_counts']),
+      data: Object.values(data['country_counts']).slice(0,50),
+      tickers: Object.keys(data['country_counts']).slice(0,50),
       width: 1000,
-      height: 600,
+      height: 1000,
       id: "barchart",
       countrydata: data['country_counts']
   
@@ -32,7 +33,7 @@ class CountryCountChart extends React.Component {
       <div>
         <h1>Country Count Chart</h1>
 
-        <BarChart id= {this.state.id} data={this.state.data} width={this.state.width} height={this.state.height} />
+        <BarChart id= {this.state.id} data={this.state.data} tickers={this.state.tickers} width={this.state.width} height={this.state.height} />
         <div id="barchart"></div>
       </div>
 

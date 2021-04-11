@@ -11,19 +11,7 @@ class App extends React.Component {
 
   constructor() {
     super()
-    const data = require('./data/example_countries.json');
-    // console.log(data);
-    // console.log(data['country_counts']);
-    // console.log(Object.values(data['country_counts']).slice(1, 10));
 
-    this.state = {
-      data: Object.values(data['country_counts']),
-      width: 1000,
-      height: 600,
-      id: "barchart",
-      countrydata: data['country_counts']
-
-    }
   }
 
 
