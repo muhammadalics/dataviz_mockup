@@ -42,8 +42,6 @@ class BarChart extends React.Component {
             .data(data)
             .enter()
             .append("rect")
-            // .attr("x", (d, i) => i * 70)
-            // .attr("y", (d, i) => h - 10 * d)
             .attr("x", (d, i) => x(i))
             .attr("y", (d, i) => y(d))
             .attr("width", x.bandwidth)
