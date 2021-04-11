@@ -1,4 +1,4 @@
-import React, {forwardRef} from 'react';
+import React, { forwardRef } from 'react';
 import MaterialTable from 'material-table';
 import AddBox from '@material-ui/icons/AddBox';
 import ArrowDownward from '@material-ui/icons/ArrowDownward';
@@ -23,13 +23,13 @@ class Table extends React.Component {
         super(props)
 
         this.state = {
-            data : { a: 1, b:2, c:3},
+            data: { a: 1, b: 2, c: 3 },
             data1: 0
         }
         // const data = { a: 1, b:2, c:3};
-    
-    
-    
+
+
+
         this.tableIcons = {
             Add: forwardRef((props, ref) => <AddBox {...props} ref={ref} />),
             Check: forwardRef((props, ref) => <Check {...props} ref={ref} />),
@@ -48,15 +48,9 @@ class Table extends React.Component {
             SortArrow: forwardRef((props, ref) => <ArrowDownward {...props} ref={ref} />),
             ThirdStateCheck: forwardRef((props, ref) => <Remove {...props} ref={ref} />),
             ViewColumn: forwardRef((props, ref) => <ViewColumn {...props} ref={ref} />)
-          };
-    
-    
-    
-    
-    
-    
-    
-    
+        };
+
+
     }
 
     componentDidMount() {
@@ -69,35 +63,56 @@ class Table extends React.Component {
         var formattedData = []
         for (const [key, value] of Object.entries(pairs)) {
             console.log(`${key}: ${value}`);
-            formattedData.push({name: key, num: value})
-          }
-          console.log(formattedData);
-          this.setState({data1 : formattedData});
+            formattedData.push({ name: key, num: value })
+        }
+        console.log(formattedData);
+        this.setState({ data1: formattedData });
     }
 
 
 
 
-
-
-    
-
     render() {
 
-        const cols =[
-            {title: 'Country', field: 'name'},
-            {title: 'Number', field: 'num'}
+        const cols = [
+            {
+                title: 'Country', field: 'name',
+                // cellStyle: {
+                //     width: 20,
+                //     maxWidth: 20
+                // },
+                // headerStyle: {
+                //     width: 20,
+                //     maxWidth: 20
+                // }
+            },
+            { title: 'Number', field: 'num' }
         ]
 
 
         return (
-            
-            <div>
+            <center>
+            <div style={{width: '50%'}}>
                 {/* {this.formatData(this.data)} */}
-                <MaterialTable title={this.props.title} data={this.state.data1} columns={cols} icons={this.tableIcons}/>
+                <MaterialTable
+                    title={this.props.title}
+                    data={this.state.data1}
+                    columns={cols}
+                    icons={this.tableIcons}
+                    options={{
+                        filtering: true,
+                        exportButton: true,
+
+
+
+
+                    }}
+
+                />
                 {/* <MaterialTable title='a table' data={this.state.data1} columns={cols}/> */}
 
             </div>
+            </center>
         )
     }
 
