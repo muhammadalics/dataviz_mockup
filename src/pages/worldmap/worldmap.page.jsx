@@ -16,9 +16,12 @@ class WorldMap extends React.Component {
     render() {
         return (
             <div>
+                <center>
                 <h1>Locations From Last Hour</h1>
+                <div>Red points mark the locations. The data for locations was taken from example_countries.json</div><br></br>
                 <LocationsOnMap data={this.state.locationdata} />
                 <div id="location"></div>
+                </center>
             </div>
         )
     }

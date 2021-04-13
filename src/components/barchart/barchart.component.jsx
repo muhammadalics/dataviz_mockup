@@ -85,16 +85,16 @@ class BarChart extends React.Component {
 
 
         const y = d3.scaleBand()
-                
+
             .domain(d3.range(data.length))
             // .range([0, this.props.width])
             .rangeRound([margin.top, this.props.height - margin.bottom])
 
         const x = d3.scaleLinear()
-            .domain([0, d3.max(data, d => d)])    
+            .domain([0, d3.max(data, d => d)])
             // .domain([25000, 0])
             .range([margin.left, this.props.width - margin.right])
-            //.range([margin.left, this.props.width - margin.right])
+        //.range([margin.left, this.props.width - margin.right])
 
         var xAxis = g => g
             .attr("transform", `translate(0,${margin.top})`)
@@ -154,7 +154,10 @@ class BarChart extends React.Component {
     }
 
     render() {
-        return <div id={"#" + this.props.id}></div>;
+        return <div id={"#barchart"}></div>;
+
+            
+        
     }
 }
 

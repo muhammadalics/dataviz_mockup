@@ -6,14 +6,12 @@ import CountryChart from './pages/country_count_chart/country_count_chart.page'
 import IndexPage from './pages/indexpage/indexpage.page'
 import {Switch, Route} from 'react-router-dom';
 
-
 class App extends React.Component {
 
   constructor() {
     super()
 
   }
-
 
   render() {
     return (

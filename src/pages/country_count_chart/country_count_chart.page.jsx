@@ -21,20 +21,20 @@ class CountryCountChart extends React.Component {
       countrydata: data['country_counts']
   
     }
-   
-  
+     
   }
-
    
   
   render() {
     return (
 
       <div>
+        <center>
         <h1>Country Count Chart</h1>
-
+        <span>This chart shows the top 50 countries by count on a horizontal bar chart. It was made using D3.js using data from example_countries.json.</span>
         <BarChart id= {this.state.id} data={this.state.data} tickers={this.state.tickers} width={this.state.width} height={this.state.height} />
         <div id="barchart"></div>
+        </center>
       </div>
 
 

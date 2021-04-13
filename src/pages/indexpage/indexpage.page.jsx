@@ -1,26 +1,28 @@
 import React from 'react';
-
-
+import {Link} from 'react-router-dom';
+import './indexpage.style.css'
 
 
 class Index extends React.Component {
     render() {
         return (
 
-            <div>
-
-
-
-                <h1>Mockups using Kolibri Telemetry Datasets</h1>
-                <span>Please click on links below to see examples of how telemetry data could be visualized and tabulated.</span>
+            <div className="indexpage1">
+                <center>
+                <h1>Sample Components using Kolibri Telemetry Datasets</h1>
+                </center>
+                <div className="indexpage">
+                <span>Please click on links below to see examples of how telemetry data could be visualized and tabulated. </span>
                 <span>Routing of this single page app is done using react-router-dom.</span>
-
+                
+                <br></br>                                         
                 <ul>
-                    <li>Coffee</li>
-                    <li>Tea</li>
-                    <li>Milk</li>
+                    <li><Link to="/locations">Locations on Map</Link></li>
+                    <li><Link to="/countrycountchart">Horizontal Bar Chart for Country Count</Link></li>
+                    <li><Link to="/countrycounttable">Data Table</Link></li>
                 </ul>
-
+                <p>Source Code: <a href="https://github.com/muhammadalics/dataviz_mockup">GitHub repo</a> </p>
+                </div>
 
             </div>
 

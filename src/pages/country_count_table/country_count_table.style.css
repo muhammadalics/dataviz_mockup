@@ -1,0 +1,16 @@
+.text1{
+    /* display: flex; */
+    /* width: 50%; */
+    margin: 100;
+    text-align: center;
+    align-content: center;
+}
+
+.featurelist {
+    margin: 100;
+    width: 50%;
+    text-align: center;
+    margin-left: 100;
+    
+}
+
