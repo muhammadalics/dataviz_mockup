@@ -1,16 +1,12 @@
 import React from 'react';
 import BarChart from '../../components/barchart/barchart.component'
 
-
 class CountryCountChart extends React.Component {
   
   constructor() {
     super()
   
     const data = require('../../data/example_countries.json');
-    // console.log(data);
-    // console.log(data['country_counts']);
-    // console.log(Object.values(data['country_counts']).slice(1, 10));
   
     this.state = {
       data: Object.values(data['country_counts']).slice(0,50),
@@ -19,12 +15,11 @@ class CountryCountChart extends React.Component {
       height: 1000,
       id: "barchart",
       countrydata: data['country_counts']
-  
+
     }
      
   }
    
-  
   render() {
     return (
 
@@ -37,13 +32,10 @@ class CountryCountChart extends React.Component {
         </center>
       </div>
 
-
     )
 
   }
 }
-
-
 
 export default CountryCountChart;
 

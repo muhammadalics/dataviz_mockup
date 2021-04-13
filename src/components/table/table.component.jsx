@@ -16,7 +16,6 @@ import SaveAlt from '@material-ui/icons/SaveAlt';
 import Search from '@material-ui/icons/Search';
 import ViewColumn from '@material-ui/icons/ViewColumn';
 
-
 class Table extends React.Component {
 
     constructor(props) {
@@ -26,9 +25,6 @@ class Table extends React.Component {
             data: { a: 1, b: 2, c: 3 },
             data1: 0
         }
-        // const data = { a: 1, b:2, c:3};
-
-
 
         this.tableIcons = {
             Add: forwardRef((props, ref) => <AddBox {...props} ref={ref} />),
@@ -54,8 +50,6 @@ class Table extends React.Component {
     }
 
     componentDidMount() {
-        // this.createTable();
-        console.log(this.props.tabdata)
         this.formatData(this.props.tabdata);
     }
 
@@ -69,54 +63,34 @@ class Table extends React.Component {
         this.setState({ data1: formattedData });
     }
 
-
-
-
     render() {
 
         const cols = [
             {
                 title: 'Country', field: 'name',
-                // cellStyle: {
-                //     width: 20,
-                //     maxWidth: 20
-                // },
-                // headerStyle: {
-                //     width: 20,
-                //     maxWidth: 20
-                // }
             },
             { title: 'Number', field: 'num' }
         ]
 
-
         return (
             <center>
-            <div style={{width: '50%'}}>
-                {/* {this.formatData(this.data)} */}
-                <MaterialTable
-                    title={this.props.title}
-                    data={this.state.data1}
-                    columns={cols}
-                    icons={this.tableIcons}
-                    options={{
-                        filtering: true,
-                        exportButton: true,
+                <div style={{ width: '50%' }}>
+                    <MaterialTable
+                        title={this.props.title}
+                        data={this.state.data1}
+                        columns={cols}
+                        icons={this.tableIcons}
+                        options={{
+                            filtering: true,
+                            exportButton: true,
 
-
-
-
-                    }}
-
-                />
-                {/* <MaterialTable title='a table' data={this.state.data1} columns={cols}/> */}
-
-            </div>
+                        }}
+                    />
+                </div>
             </center>
         )
     }
 
 }
-
 
 export default Table;

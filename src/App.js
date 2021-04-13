@@ -10,27 +10,20 @@ class App extends React.Component {
 
   constructor() {
     super()
-
   }
 
   render() {
     return (
-
-
       <div className="App">
-
         <Switch>
           <Route exact path='/' component={IndexPage} /> 
-          <Route exact path='/countrycounttable/' component={CountryTable} />
+          <Route exact path='/countrycounttable' component={CountryTable} />
           <Route exact path='/countrycountchart' component={CountryChart} />
           <Route exact path='/locations' component={LocationsMap} />
         </Switch>
-
       </div>
     )
   }
 }
-
-
 
 export default App;

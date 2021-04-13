@@ -2,7 +2,6 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import './indexpage.style.css'
 
-
 class Index extends React.Component {
     render() {
         return (
@@ -23,21 +22,9 @@ class Index extends React.Component {
                 </ul>
                 <p>Source Code: <a href="https://github.com/muhammadalics/dataviz_mockup">GitHub repo</a> </p>
                 </div>
-
             </div>
-
-
-
-
-
-
-
-
-
         )
     }
 }
-
-
 
 export default Index;
